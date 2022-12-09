@@ -29,33 +29,34 @@ class TextColors:
     BOLD = '\033[1m'
 
 
-def initialise_game():
+def welcome_to_game():
     """
-    Option to begin game or select difficulty
+    Welcome user to game and ask for their name
     """
-    print(" Press " + TextColors.BLUE + "1" + TextColors.WHITE +
-           " to play game")
-    print(" Press " + TextColors.BLUE + "2" + TextColors.WHITE +
-           " to set difficulty")
-    print(" Press " + TextColors.BLUE + "3" + TextColors.WHITE +
-          " to view rules")
-    options = False
-    while not options:
-        settings = input("\n ")
-        if settings == "1":
-            options = True
-            difficulty = "default"
-            return difficulty
+    print("{}    {}    {}{}     {}    {}    {}}}}}    {}      {}    {}{}     {}    {}")
+    print("{}    {}   {}  {}    {}}}  {}   {}    {}   {}}}  {{{}   {}  {}    {}}}  {}")
+    print("{}{{}}{}  {}{{}}{}   {} {} {}   {}         {} {{}} {}  {}{{}}{}   {} {} {}")
+    print("{}    {}  {}    {}   {}  {{{}   {}  {{{{   {}  {}  {}  {}    {}   {}  {{{}")
+    print("{}    {}  {}    {}   {}    {}    {}}}}}    {}      {}  {}    {}   {}    {} \n")
 
-        elif settings == "2":
-            options = True
-
-        elif settings == "3":
-            options = True
-            game_rules()
-
+    username = " "
+    while True:
+        username = input("Welcome! Please enter your Name: \n")
+ 
+        if username.isalnum() is not True:
+            print("Error: Letters and numbers only.")
+            #continue
         else:
-            print(TextColors.RED + " Please select 1, 2 or 3 to make your"
-                  " choice" + TextColors.WHITE)
+            print(f"Hi {username}, You have up to 8 guesses to guess the Word.")
+            input("When you are ready to play, press 1 to start \n")
+            return username
+            break
+ 
+    print("Press" + TextColors.GREEN + "1" + TextColors.WHITE +
+         "to start game")
+    print("Press" + TextColors.GREEN + "2" + TextColors.WHITE +
+         "to view game rules")
 
+
+welcome_to_game()
 
