@@ -39,28 +39,25 @@ def welcome_to_game():
  
         else:
             print(f"Hi {username}, You have up to 8 guesses to guess the Word.")
-            input("When ready to play, press Enter. \n")
+            print("If you have not guessed the word correctly by the time ")
+            print("your lives reaches 0, it is game over.")
+            input("When ready to play, press Enter, \n")
             return username
             break
 
 
-def game_rules():
+def get_random_word():
     """
-    Define the rules of the game
+    Get random word from words.txt file to play
     """
-    print(
-        """
-        Guess a letter for the random word.
-        Is your letter in the word? Great! You continue without
-        losing a life. Is it not? Sorry! You lose a life. When your 
-        lives reach 0 without having guessed the word correctly, it
-        is game over.
-        """
-            )
+    random_word = random.choice(open('words.txt', 'r'))
+    word = random_word.read()
+    random_word.close()
+    print(word)
 
 
 welcome_to_game()
+get_random_word()
 # start_game()
-game_rules()
 
 
