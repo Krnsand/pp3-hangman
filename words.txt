@@ -13,7 +13,6 @@ locket
 iron
 rejoice
 cluttered
-class
 well-to-do
 accept
 well-groomed
@@ -38,7 +37,6 @@ condition
 stamp
 alcoholic
 rapid
-try
 cloudy
 handsomely
 blue-eyed
@@ -393,7 +391,6 @@ zoom
 abandoned
 cruel
 boot
-ad hoc
 offend
 wet
 present
@@ -402,7 +399,6 @@ list
 unarmed
 harass
 cut
-self
 boring
 meaty
 farm
