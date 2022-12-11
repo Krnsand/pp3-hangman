@@ -50,10 +50,10 @@ def get_random_word():
     """
     Get random word from words.txt file to play
     """
-    random_word = random.choice(open('words.txt', 'r'))
-    word = random_word.read()
-    random_word.close()
-    print(word)
+    with open("words.txt", "r") as file:
+        allText = file.read()
+        words = list(map(str, allText.split()))
+        print(random.choice(words))
 
 
 welcome_to_game()
