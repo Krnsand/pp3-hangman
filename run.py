@@ -29,14 +29,14 @@ def welcome_to_game():
     print("{}{{}}{}  {}{{}}{}   {} {} {}   {}         {} {{}} {}  {}{{}}{}   {} {} {}")
     print("{}    {}  {}    {}   {}  {{{}   {}  {{{{   {}  {}  {}  {}    {}   {}  {{{}")
     print("{}    {}  {}    {}   {}    {}    {}}}}}    {}      {}  {}    {}   {}    {} \n")
- 
+
     username = " "
     while True:
         username = input("Welcome! Please enter your name: \n")
- 
+
         if username.isalnum() is not True:
-           print("Error: Letters and numbers only. \n")
- 
+            print("Error: Letters and numbers only. \n")
+
         else:
             print(f"Hi {username}, You have up to 8 guesses to guess the Word.")
             print("If you have not guessed the word correctly by the time ")
@@ -68,10 +68,19 @@ def restart_game():
         print("Thank you for playing! Take care until next time!")
 
 
-def play_game():
+def play_game(word):
     """
     Function to play game
     """
+    word_completion = "_" * len(word)
+    guessed = False
+    guessed_letters = []
+    guessed_words = []
+    lives = 8
+    print("Let's play Hangman!")
+    print(display_hangman(tries))
+    print(word_completion)
+    print("\n")
 
 
 welcome_to_game()
