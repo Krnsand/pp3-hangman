@@ -56,11 +56,27 @@ def get_random_word():
         print(random.choice(words))
 
 
+def restart_game():
+    """
+    When the game is finished ask the player if they want to play again. 
+    If they don't, tell them thank you for playing
+    """
+    restart_answer = input("Do you want to play again? Press Y/N \n").lower()
+    if restart_answer == "y":
+        play_game()
+    else:
+        print("Thank you for playing! Take care until next time!")
 
+
+def play_game():
+    """
+    Function to play game
+    """
 
 
 welcome_to_game()
 get_random_word()
-# start_game()
+restart_game()
+play_game()
 
 
