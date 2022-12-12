@@ -54,13 +54,14 @@ def get_random_word():
         allText = file.read()
         words = list(map(str, allText.split()))
         print(random.choice(words))
+        return words
 
 
 def play_game(word):
     """
     Function to play game
     """
-    # word_completion = "_" * len(word)
+    word_completion = "_" * len(word)
     guessed = False
     guessed_letters = []
     guessed_words = []
