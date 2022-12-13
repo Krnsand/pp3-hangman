@@ -83,15 +83,21 @@ def play_game(word):
     lives = 6
     print("Let's play Hangman!")
     print(display_hangman(lives))
-    print(f"Lives: {lives}\n")
-    print("The word to guess: " + " ".join(word_completion) + "\n")
     print("\n")
+
+    if lives > 0:
+        print(f"Lives: {lives}\n")
+        print("The word to guess: " + " ".join(word_completion) + "\n") 
+        print("Letters guessed: " + ", ".join(sorted(guessed_letters)) + "\n")
+
     while not guessed and lives > 0:
         guess = input("Please guess a letter or word: \n").upper()
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters:
                 print(TextColors.YELLOW + f"You already guessed the"
                       f" letter {guess} \n" + TextColors.WHITE)
+                print("The word to guess: " + " ".join(word_completion) + "\n")
+                print("Letters guessed: " + ", ".join(sorted(guessed_letters)) + "\n")
 
             elif guess not in word:
                 print(TextColors.RED + f"{guess} is not in the"
@@ -111,6 +117,8 @@ def play_game(word):
                 word_completion = "".join(word_completion_list)
                 if "_" not in word_completion:
                     guessed = True
+            print("The word to guess: " + " ".join(word_completion) + "\n")
+            print("Letters guessed: " + ", ".join(sorted(guessed_letters)) + "\n")
 
         elif len(guess) == len(word) and guess.isalpha():
             if guess in guessed_words:
@@ -131,7 +139,8 @@ def play_game(word):
             print(word_completion)
             print("\n")
     if guessed:
-        print("Congrats, you guessed the word! You Win!\n")
+        print("Congrats, you guessed" 
+              + TextColors.BOLD + f" {word} correctly!")
         print(
               TextColors.GREEN + """
         __   __
@@ -147,7 +156,7 @@ def play_game(word):
         )
     else:
         print("Sorry you ran out of tries."
-              " The word was" + TextColors.BOLD + f" {word}.\n")
+              " The word was" + TextColors.BOLD + f" {word}.")
         print(
               TextColors.RED + """
           ____
@@ -162,12 +171,11 @@ def play_game(word):
         """ + TextColors.WHITE
         )
 
-    # print(display_hangman(lives))
-
 
 def display_hangman(lives):
     """
-    Illustrations of a man being hanged displayed as the game goes on
+    Illustrations of a man being hanged displayed as 
+    the game goes on
     """
     stages = [  # final state: head, torso, both arms, and both legs
                 """
