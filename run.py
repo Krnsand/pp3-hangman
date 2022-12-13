@@ -14,20 +14,32 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('hangman')
 
-scoreboard = SHEET.worksheet("scores")
+# scoreboard = SHEET.worksheet("scores")
 # data = scores.get_all_values()
-score = 0
+# score = 0
+
+
+class TextColors:
+    """
+    Define the different text colors to be used
+    """
+    BLUE = '\033[38;5;159m'
+    GREEN = '\033[92m'
+    RED = '\033[91m'
+    WHITE = '\033[0m'
+    MAG = '\033[35m'
+    BOLD = '\033[1m'
 
 
 def welcome_to_game():
     """
     Welcome user to game and ask for their name. Show logo
     """
-    print("{}    {}    {}{}     {}    {}    {}}}}}    {}      {}    {}{}     {}    {}")
+    print(TextColors.RED + "{}    {}    {}{}     {}    {}    {}}}}}    {}      {}    {}{}     {}    {}")
     print("{}    {}   {}  {}    {}}}  {}   {}    {}   {}}}  {{{}   {}  {}    {}}}  {}")
     print("{}{{}}{}  {}{{}}{}   {} {} {}   {}         {} {{}} {}  {}{{}}{}   {} {} {}")
     print("{}    {}  {}    {}   {}  {{{}   {}  {{{{   {}  {}  {}  {}    {}   {}  {{{}")
-    print("{}    {}  {}    {}   {}    {}    {}}}}}    {}      {}  {}    {}   {}    {} \n")
+    print("{}    {}  {}    {}   {}    {}    {}}}}}    {}      {}  {}    {}   {}    {} \n" + TextColors.WHITE)
 
     username = " "
     while True:
@@ -37,10 +49,14 @@ def welcome_to_game():
             print("Error: Letters and numbers only. \n")
 
         else:
-            print(f"\nHi {username}, You have up to 6 guesses to guess the Word.")
+            print(f"\nHi {TextColors.MAG}{username}!" + TextColors.WHITE)
+            print("You have up to" + TextColors.BLUE + " 6 "
+                  + TextColors.WHITE + "guesses to guess the Word.")
             print("If you have not guessed the word correctly by the time ")
-            print("your lives reaches 0, it is game over.\n")
-            input("When ready to play, press Enter, \n")
+            print("your lives reaches" + TextColors.BLUE + " 0, "
+                  + TextColors.WHITE + "it is game over.\n")
+            input("When ready to play, press" + TextColors.BLUE + " Enter, \n" 
+                  + TextColors.WHITE)
             return username
             break
 
@@ -69,7 +85,8 @@ def play_game(word):
     print("The word to guess: " + " ".join(word_completion) + "\n")
     print("\n")
     while not guessed and lives > 0:
-        guess = input("Please guess a letter or word: ").upper()
+        guess = input(TextColors.BLUE + "Please guess a letter or word: \n"
+                      + TextColors.WHITE).upper()
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters:
                 print(f"You already guessed the letter {guess} \n")
@@ -137,7 +154,7 @@ def display_hangman(lives):
                    |      O
                    |     \\|/
                    |      |
-                   |     / 
+                   |     /
                    -
                 """,
                 # head, torso, and both arms
@@ -147,7 +164,7 @@ def display_hangman(lives):
                    |      O
                    |     \\|/
                    |      |
-                   |      
+                   |
                    -
                 """,
                 # head, torso, and one arm
@@ -157,7 +174,7 @@ def display_hangman(lives):
                    |      O
                    |     \\|
                    |      |
-                   |     
+                   |
                    -
                 """,
                 # head and torso
@@ -167,7 +184,7 @@ def display_hangman(lives):
                    |      O
                    |      |
                    |      |
-                   |     
+                   |
                    -
                 """,
                 # head
@@ -175,19 +192,19 @@ def display_hangman(lives):
                    --------
                    |      |
                    |      O
-                   |    
-                   |      
-                   |     
+                   |
+                   |
+                   |
                    -
                 """,
                 # initial empty state
                 """
                    --------
                    |      |
-                   |      
-                   |    
-                   |      
-                   |     
+                   |
+                   |
+                   |
+                   |
                    -
                 """
     ]
@@ -212,11 +229,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-"""
-welcome_to_game()
-get_random_word()
-restart_game()
-play_game()
-"""
-
