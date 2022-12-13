@@ -72,16 +72,15 @@ def play_game(word):
         guess = input("Please guess a letter or word: ").upper()
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters:
-                print(f"You already guessed the letter {guess}")
+                print(f"You already guessed the letter {guess} \n")
 
             elif guess not in word:
-                print(f"{guess} is not in the word.")
+                print(f"{guess} is not in the word. Lives left: {lives} \n")
                 lives -= 1
                 guessed_letters.append(guess)
-                guess = input(f"Lives left: {lives}, Guess a letter or the word: \n")
 
             else:
-                print(f"Good job, {guess} is in the word!")
+                print(f"Good job, {guess} is in the word!\n")
                 guessed_letters.append(guess)
                 word_completion_list = list(word_completion)
                 indices = [i for i, letter in enumerate(word) if letter == guess]
@@ -93,9 +92,9 @@ def play_game(word):
 
         elif len(guess) == len(word) and guess.isalpha():
             if guess in guessed_words:
-                print(f"You already guessed the word {guess}")
+                print(f"You already guessed the word {guess} \n")
             elif guess != word:
-                print(f"{guess} is not the word.")
+                print(f"{guess} is not the word.\n")
                 lives -= 1
                 guessed_words.append(guess)
                 guess = input(f"Lives left: {lives}, Guess a letter or the word: \n")
@@ -104,14 +103,14 @@ def play_game(word):
                 word_completion = word
 
         else:
-            print("Not a valid guess.")
+            print("Not a valid guess. \n")
             print(display_hangman(lives))
             print(word_completion)
             print("\n")
     if guessed:
-        print("Congrats, you guessed the word! You Win!")
+        print("Congrats, you guessed the word! You Win!\n")
     else:
-        print(f"Sorry you ran out of tries. The word was {word}.")
+        print(f"Sorry you ran out of tries. The word was {word}.\n")
 
 
 def display_hangman(lives):
@@ -205,7 +204,7 @@ def main():
         play_game(word)
         break
     else:
-        print("Thank you for playing! Take care until next time!")
+        print("\nThank you for playing! Take care until next time!")
 
 
 if __name__ == "__main__":
