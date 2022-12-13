@@ -78,6 +78,7 @@ def play_game(word):
                 print(f"{guess} is not in the word. Lives left: {lives} \n")
                 lives -= 1
                 guessed_letters.append(guess)
+                print(display_hangman(lives))
 
             else:
                 print(f"Good job, {guess} is in the word!\n")
@@ -94,10 +95,10 @@ def play_game(word):
             if guess in guessed_words:
                 print(f"You already guessed the word {guess} \n")
             elif guess != word:
-                print(f"{guess} is not the word.\n")
+                print(f"{guess} is not the word. Lives left: {lives}\n")
                 lives -= 1
                 guessed_words.append(guess)
-                guess = input(f"Lives left: {lives}, Guess a letter or the word: \n")
+                print(display_hangman(lives))
             else:
                 guessed = True
                 word_completion = word
@@ -111,6 +112,8 @@ def play_game(word):
         print("Congrats, you guessed the word! You Win!\n")
     else:
         print(f"Sorry you ran out of tries. The word was {word}.\n")
+
+    print(display_hangman(lives))
 
 
 def display_hangman(lives):
