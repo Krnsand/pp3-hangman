@@ -47,13 +47,11 @@ def welcome_to_game():
 
 def get_random_word():
     """
-    Get random word
+    Picks a random word from words.txt to be used as the word the player has
+    to guess.
     """
-    with open("words.txt", "r") as file:
-        allText = file.read()
-        words = list(map(str, allText.split()))
-        print(random.choice(words))
-        return words
+    random_word = random.choice(open("words.txt", "r").read().split('\n'))
+    return random_word.upper()
 
 
 def play_game(word):
@@ -80,6 +78,7 @@ def play_game(word):
                 print(f"{guess} is not in the word.")
                 lives -= 1
                 guessed_letters.append(guess)
+                guess = input(f"Lives left: {lives}, Guess a letter or the word: \n")
 
             else:
                 print(f"Good job, {guess} is in the word!")
@@ -99,6 +98,7 @@ def play_game(word):
                 print(f"{guess} is not the word.")
                 lives -= 1
                 guessed_words.append(guess)
+                guess = input(f"Lives left: {lives}, Guess a letter or the word: \n")
             else:
                 guessed = True
                 word_completion = word
