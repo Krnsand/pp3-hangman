@@ -17,6 +17,7 @@ SHEET = GSPREAD_CLIENT.open('hangman')
 # scoreboard = SHEET.worksheet("scores")
 # data = scores.get_all_values()
 # score = 0
+# leaderboards and stuff
 
 
 class TextColors:
@@ -97,7 +98,8 @@ def play_game(word):
                 print(TextColors.YELLOW + f"You already guessed the"
                       f" letter {guess} \n" + TextColors.WHITE)
                 print("The word to guess: " + " ".join(word_completion) + "\n")
-                print("Letters guessed: " + ", ".join(sorted(guessed_letters)) + "\n")
+                print("Letters guessed: " + 
+                      ", ".join(sorted(guessed_letters)) + "\n")
 
             elif guess not in word:
                 print(TextColors.RED + f"{guess} is not in the"
@@ -111,14 +113,16 @@ def play_game(word):
                       " word!\n" + TextColors.WHITE)
                 guessed_letters.append(guess)
                 word_completion_list = list(word_completion)
-                indices = [i for i, letter in enumerate(word) if letter == guess]
+                indices = [i for i, letter in enumerate(word)
+                           if letter == guess]
                 for index in indices:
                     word_completion_list[index] = guess
                 word_completion = "".join(word_completion_list)
                 if "_" not in word_completion:
                     guessed = True
             print("The word to guess: " + " ".join(word_completion) + "\n")
-            print("Letters guessed: " + ", ".join(sorted(guessed_letters)) + "\n")
+            print("Letters guessed: " + 
+                  ", ".join(sorted(guessed_letters)) + "\n")
 
         elif len(guess) == len(word) and guess.isalpha():
             if guess in guessed_words:
@@ -140,7 +144,7 @@ def play_game(word):
             print("\n")
     if guessed:
         print("Congrats, you guessed" 
-              + TextColors.BOLD + f" {word} correctly!")
+              + TextColors.BOLD + f" {word}" + TextColors.WHITE + " correctly!")
         print(
               TextColors.GREEN + """
         __   __
