@@ -58,7 +58,7 @@ def welcome_to_game():
             print("If you have not guessed the word correctly by the time ")
             print("your lives reaches" + TextColors.BLUE + " 0, "
                   + TextColors.WHITE + "it is game over.\n")
-            input("When ready to play, press" + TextColors.BLUE + " Enter, \n" 
+            input("When ready to play, press" + TextColors.BLUE + " Enter, \n"
                   + TextColors.WHITE)
             return username
             break
@@ -88,7 +88,7 @@ def play_game(word):
 
     if lives > 0:
         print(f"Lives: {lives}\n")
-        print("The word to guess: " + " ".join(word_completion) + "\n") 
+        print("The word to guess: " + " ".join(word_completion) + "\n")
         print("Letters guessed: " + ", ".join(sorted(guessed_letters)) + "\n")
 
     while not guessed and lives > 0:
@@ -98,7 +98,7 @@ def play_game(word):
                 print(TextColors.YELLOW + f"You already guessed the"
                       f" letter {guess} \n" + TextColors.WHITE)
                 print("The word to guess: " + " ".join(word_completion) + "\n")
-                print("Letters guessed: " + 
+                print("Letters guessed: " +
                       ", ".join(sorted(guessed_letters)) + "\n")
 
             elif guess not in word:
@@ -121,7 +121,7 @@ def play_game(word):
                 if "_" not in word_completion:
                     guessed = True
             print("The word to guess: " + " ".join(word_completion) + "\n")
-            print("Letters guessed: " + 
+            print("Letters guessed: " +
                   ", ".join(sorted(guessed_letters)) + "\n")
 
         elif len(guess) == len(word) and guess.isalpha():
@@ -143,7 +143,7 @@ def play_game(word):
             print(word_completion)
             print("\n")
     if guessed:
-        print("Congrats, you guessed" 
+        print("Congrats, you guessed"
               + TextColors.BOLD + f" {word}" + TextColors.WHITE + " correctly!")
         print(
               TextColors.GREEN + """
@@ -178,7 +178,7 @@ def play_game(word):
 
 def display_hangman(lives):
     """
-    Illustrations of a man being hanged displayed as 
+    Illustrations of a man being hanged displayed as
     the game goes on
     """
     stages = [  # final state: head, torso, both arms, and both legs
