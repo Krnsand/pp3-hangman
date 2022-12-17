@@ -28,7 +28,6 @@ class TextColors:
     GREEN = '\033[92m'
     RED = '\033[91m'
     WHITE = '\033[0m'
-    MAGENTA = '\033[35m'
     YELLOW = '\033[33m'
     BOLD = '\033[1m'
 
@@ -52,7 +51,7 @@ def welcome_to_game():
                   "only.\n" + TextColors.WHITE)
 
         else:
-            print(f"\nHi {TextColors.MAGENTA}{username}!" + TextColors.WHITE)
+            print(f"\nHi {TextColors.BLUE}{username}!" + TextColors.WHITE)
             print("You have up to" + TextColors.BLUE + " 6 "
                   + TextColors.WHITE + "guesses to guess the Word.")
             print("If you have not guessed the word correctly by the time ")
@@ -270,7 +269,7 @@ def main():
         play_game(word)
         break
     else:
-        print(TextColors.MAGENTA + "\nThank you for playing! Take care until"
+        print(TextColors.BLUE + "\nThank you for playing! Take care until"
               " next time! \n" + TextColors.WHITE)
 
 
