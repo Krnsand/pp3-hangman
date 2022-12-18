@@ -44,20 +44,20 @@ def welcome_to_game():
 
     username = " "
     while True:
-        username = input(" Welcome! Please enter your name: \n")
+        username = input("Welcome! Please enter your name: \n")
 
         if username.isalnum() is not True:
             print(TextColors.RED + "Error: Letters and numbers"
                   "only.\n" + TextColors.WHITE)
 
         else:
-            print(f"\n Hi {TextColors.BLUE}{username}!" + TextColors.WHITE)
-            print(" You have up to" + TextColors.BLUE + " 6 "
+            print(f"\nHi {TextColors.BLUE}{username}!" + TextColors.WHITE)
+            print("You have up to" + TextColors.BLUE + " 6 "
                   + TextColors.WHITE + "guesses to guess the Word.")
-            print(" If you have not guessed the word correctly by the time ")
+            print("If you have not guessed the word correctly by the time ")
             print("your lives reaches" + TextColors.BLUE + " 0, "
                   + TextColors.WHITE + "it is game over.\n")
-            input(" When ready to play, press" + TextColors.BLUE + " Enter, \n"
+            input("When ready to play, press" + TextColors.BLUE + " Enter, \n"
                   + TextColors.WHITE)
             return username
             break
@@ -81,35 +81,35 @@ def play_game(word):
     guessed_letters = []
     guessed_words = []
     lives = 6
-    print(" Let's play Hangman!")
+    print("Let's play Hangman!")
     print(display_hangman(lives))
     print("\n")
 
     if lives > 0:
-        print(f" Lives: {lives}\n")
-        print(" The word to guess: " + " ".join(word_completion) + "\n")
-        print(" Letters guessed: " + ", ".join(sorted(guessed_letters)) + "\n")
+        print(f"Lives: {lives}\n")
+        print("The word to guess: " + " ".join(word_completion) + "\n")
+        print("Letters guessed: " + ", ".join(sorted(guessed_letters)) + "\n")
 
     while not guessed and lives > 0:
-        guess = input(" Please guess a letter or word: \n").upper()
+        guess = input("Please guess a letter or word: \n").upper()
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters:
                 print(TextColors.YELLOW + f" You already guessed the"
-                      f" letter {guess} \n" + TextColors.WHITE)
-                print(" The word to guess: " + " ".join(word_completion) + 
+                      f"letter {guess} \n" + TextColors.WHITE)
+                print("The word to guess: " + " ".join(word_completion) + 
                       "\n")
-                print(" Letters guessed: " +
+                print("Letters guessed: " +
                       ", ".join(sorted(guessed_letters)) + "\n")
 
             elif guess not in word:
-                print(TextColors.RED + f" {guess} is not in the"
+                print(TextColors.RED + f"{guess} is not in the"
                       f" word. Lives left: {lives} \n" + TextColors.WHITE)
                 lives -= 1
                 guessed_letters.append(guess)
                 print(display_hangman(lives))
 
             else:
-                print(TextColors.GREEN + f" Good job, {guess} is in the"
+                print(TextColors.GREEN + f"Good job, {guess} is in the"
                       " word!\n" + TextColors.WHITE)
                 guessed_letters.append(guess)
                 word_completion_list = list(word_completion)
@@ -120,16 +120,16 @@ def play_game(word):
                 word_completion = "".join(word_completion_list)
                 if "_" not in word_completion:
                     guessed = True
-            print(" The word to guess: " + " ".join(word_completion) + "\n")
-            print(" Letters guessed: " +
+            print("The word to guess: " + " ".join(word_completion) + "\n")
+            print("Letters guessed: " +
                   ", ".join(sorted(guessed_letters)) + "\n")
 
         elif len(guess) == len(word) and guess.isalpha():
             if guess in guessed_words:
-                print(f" You already guessed the word {guess} \n")
+                print(f"You already guessed the word {guess} \n")
             elif guess != word:
                 print(TextColors.RED + f" {guess} is not the word."
-                      f" Lives left: {lives}\n" + TextColors.WHITE)
+                      f"Lives left: {lives}\n" + TextColors.WHITE)
                 lives -= 1
                 guessed_words.append(guess)
                 print(display_hangman(lives))
@@ -138,12 +138,12 @@ def play_game(word):
                 word_completion = word
 
         else:
-            print(TextColors.RED + " Not a valid guess. \n" + TextColors.WHITE)
+            print(TextColors.RED + "Not a valid guess. \n" + TextColors.WHITE)
             print(display_hangman(lives))
             print(word_completion)
             print("\n")
     if guessed:
-        print(" Congrats, you guessed"
+        print("Congrats, you guessed"
               + TextColors.BOLD + f" {word}" + TextColors.WHITE + 
               " correctly!")
         print(
@@ -263,7 +263,7 @@ def main():
     welcome_to_game()
     word = get_random_word()
     play_game(word)
-    while input(" Do you want to play again? Press"
+    while input("Do you want to play again? Press"
                 + TextColors.BLUE + " Y/N \n"
                 + TextColors.WHITE).lower() == "y":
         welcome_to_game()
