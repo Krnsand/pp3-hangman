@@ -271,7 +271,7 @@ def main():
         play_game(word)
         break
     else:
-        print(TextColors.BLUE + "\n Thank you for playing! Take care until"
+        print(TextColors.BLUE + "\nThank you for playing! Take care until"
               " next time! \n" + TextColors.WHITE)
 
 
