@@ -14,10 +14,8 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('hangman')
 
-# scoreboard = SHEET.worksheet("scores")
-# data = scores.get_all_values()
-# score = 0
-# leaderboards and stuff
+scoreboard = SHEET.worksheet("scores")
+score = scoreboard.get_all_values()
 
 
 class TextColors:
@@ -36,11 +34,16 @@ def welcome_to_game():
     """
     Welcome user to game and ask for their name. Show logo
     """
-    print(TextColors.RED + "{}    {}    {}{}     {}    {}    {}}}}}    {}      {}    {}{}     {}    {}")
-    print("{}    {}   {}  {}    {}}}  {}   {}    {}   {}}}  {{{}   {}  {}    {}}}  {}")
-    print("{}{{}}{}  {}{{}}{}   {} {} {}   {}         {} {{}} {}  {}{{}}{}   {} {} {}")
-    print("{}    {}  {}    {}   {}  {{{}   {}  {{{{   {}  {}  {}  {}    {}   {}  {{{}")
-    print("{}    {}  {}    {}   {}    {}    {}}}}}    {}      {}  {}    {}   {}    {} \n" + TextColors.WHITE)
+    print(TextColors.RED + "{}    {}    {}{}     {}    {}    {}}}}}    {}    "
+          "  {}    {}{}     {}    {}")
+    print("{}    {}   {}  {}    {}}}  {}   {}    {}   {}}}  {{{}   {}  {}    "
+          "{}}}  {}")
+    print("{}{{}}{}  {}{{}}{}   {} {} {}   {}         {} {{}} {}  {}{{}}{}   "
+          "{} {} {}")
+    print("{}    {}  {}    {}   {}  {{{}   {}  {{{{   {}  {}  {}  {}    {}   "
+          "{}  {{{}")
+    print("{}    {}  {}    {}   {}    {}    {}}}}}    {}      {}  {}    {}   "
+          "{}    {} \n" + TextColors.WHITE)
 
     username = " "
     while True:
@@ -60,7 +63,6 @@ def welcome_to_game():
             input("When ready to play, press" + TextColors.BLUE + " Enter, \n"
                   + TextColors.WHITE)
             return username
-            break
 
 
 def get_random_word():
@@ -94,9 +96,9 @@ def play_game(word):
         guess = input("Please guess a letter or word: \n").upper()
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters:
-                print(TextColors.YELLOW + f" You already guessed the"
+                print(TextColors.YELLOW + f"You already guessed the"
                       f"letter {guess} \n" + TextColors.WHITE)
-                print("The word to guess: " + " ".join(word_completion) + 
+                print("The word to guess: " + " ".join(word_completion) +
                       "\n")
                 print("Letters guessed: " +
                       ", ".join(sorted(guessed_letters)) + "\n")
@@ -128,7 +130,7 @@ def play_game(word):
             if guess in guessed_words:
                 print(f"You already guessed the word {guess} \n")
             elif guess != word:
-                print(TextColors.RED + f" {guess} is not the word."
+                print(TextColors.RED + f"{guess} is not the word."
                       f"Lives left: {lives}\n" + TextColors.WHITE)
                 lives -= 1
                 guessed_words.append(guess)
@@ -144,9 +146,21 @@ def play_game(word):
             print("\n")
     if guessed:
         print("Congrats, you guessed"
-              + TextColors.BOLD + f" {word}" + TextColors.WHITE + 
+              + TextColors.BOLD + f" {word}" + TextColors.WHITE +
               " correctly!")
-        print(
+        player_wins()
+
+    else:
+        print("Sorry you ran out of tries."
+              " The word was" + TextColors.BOLD + f" {word}.")
+        game_over()
+
+
+def player_wins():
+    """
+    Graphics for when player wins
+    """
+    print(
               TextColors.GREEN + """
         __   __
         \\ \\ / /__  _   _
@@ -159,11 +173,14 @@ def play_game(word):
           \\_/\\_/ |_|_| |_(_)
         """ + TextColors.WHITE
         )
-    else:
-        print("Sorry you ran out of tries."
-              " The word was" + TextColors.BOLD + f" {word}.")
-        print(
-              TextColors.RED + """
+
+
+def game_over():
+    """
+    Graphics for game over
+    """
+    print(
+            TextColors.RED + """
           ____
          / ___| __ _ _ __ ___   ___
         | |  _ / _` | '_ ` _ \\ / _ \\
