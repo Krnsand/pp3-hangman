@@ -97,7 +97,7 @@ def play_game(word):
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters:
                 print(TextColors.YELLOW + f"You already guessed the"
-                      f"letter {guess} \n" + TextColors.WHITE)
+                      f" letter {guess} \n" + TextColors.WHITE)
                 print("The word to guess: " + " ".join(word_completion) +
                       "\n")
                 print("Letters guessed: " +
@@ -109,6 +109,10 @@ def play_game(word):
                 lives -= 1
                 guessed_letters.append(guess)
                 print(display_hangman(lives))
+                print("The word to guess: " + " ".join(word_completion) +
+                      "\n")
+                print("Letters guessed: " +
+                      ", ".join(sorted(guessed_letters)) + "\n")
 
             else:
                 print(TextColors.GREEN + f"Good job, {guess} is in the"
@@ -122,9 +126,10 @@ def play_game(word):
                 word_completion = "".join(word_completion_list)
                 if "_" not in word_completion:
                     guessed = True
-            print("The word to guess: " + " ".join(word_completion) + "\n")
-            print("Letters guessed: " +
-                  ", ".join(sorted(guessed_letters)) + "\n")
+                print("The word to guess: " + " ".join(word_completion) +
+                      "\n")
+                print("Letters guessed: " +
+                      ", ".join(sorted(guessed_letters)) + "\n")
 
         elif len(guess) == len(word) and guess.isalpha():
             if guess in guessed_words:
@@ -144,6 +149,7 @@ def play_game(word):
             print(display_hangman(lives))
             print(word_completion)
             print("\n")
+
     if guessed:
         print("Congrats, you guessed"
               + TextColors.BOLD + f" {word}" + TextColors.WHITE +
@@ -161,7 +167,7 @@ def player_wins():
     Graphics for when player wins
     """
     print(
-              TextColors.GREEN + """
+            TextColors.GREEN + """
         __   __
         \\ \\ / /__  _   _
          \\ V / _ \\| | | |
