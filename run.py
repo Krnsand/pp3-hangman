@@ -1,3 +1,7 @@
+"""
+Import the random choice function and gspread to access score spreadsheet, as
+well as import the credentials
+"""
 import random
 import gspread
 from google.oauth2.service_account import Credentials
@@ -179,6 +183,7 @@ def player_wins():
           \\_/\\_/ |_|_| |_(_)
         """ + TextColors.WHITE
         )
+    restart_game()
 
 
 def game_over():
@@ -279,23 +284,44 @@ def display_hangman(lives):
     return stages[lives]
 
 
+def restart_game():
+    """
+    Restart game function
+    """
+    game_restart = False
+    while not game_restart:
+        restart = input(f"Would you like to play again? {TextColors.BLUE}"
+                        f"Y/N{TextColors.WHITE}\n ").upper()
+        try:
+            if restart == "Y":
+                game_restart = True
+                welcome_to_game()
+                word = get_random_word()
+                play_game(word)
+
+            elif restart == "N":
+                game_restart = True
+                print(TextColors.BLUE + "\nThank you for playing! Take care"
+                      " until next time! \n" + TextColors.WHITE)
+
+            else:
+                raise ValueError(
+                    f" You must type in Y or N. You typed {(restart)}"
+                )
+
+        except ValueError as e:
+            print(f"{TextColors().RED}{e}.\n Please try again.\n"
+                  f"{TextColors().WHITE}")
+
+
 def main():
     """
-    The main function to call all other functions
+     The main function to call all other functions
     """
     welcome_to_game()
     word = get_random_word()
     play_game(word)
-    while input("Do you want to play again? Press"
-                + TextColors.BLUE + " Y/N \n"
-                + TextColors.WHITE).lower() == "y":
-        welcome_to_game()
-        word = get_random_word()
-        play_game(word)
-        break
-    else:
-        print(TextColors.BLUE + "\nThank you for playing! Take care until"
-              " next time! \n" + TextColors.WHITE)
+    restart_game()
 
 
 if __name__ == "__main__":
