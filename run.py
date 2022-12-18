@@ -18,8 +18,8 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('hangman')
 
-scoreboard = SHEET.worksheet("scores")
-score = scoreboard.get_all_values()
+# scoreboard = SHEET.worksheet("scores")
+# score = scoreboard.get_all_values()
 
 
 class TextColors:
