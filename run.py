@@ -151,7 +151,6 @@ def play_game(word):
         else:
             print(TextColors.RED + "Not a valid guess. \n" + TextColors.WHITE)
             print(display_hangman(lives))
-            # print(word_completion)
             print("\n")
 
     if guessed:
@@ -187,7 +186,6 @@ def player_wins():
           \\_/\\_/ |_|_| |_(_)
         """ + TextColors.WHITE
         )
-    restart_game()
 
 
 def game_over():
@@ -207,7 +205,6 @@ def game_over():
          \\___/  \\_/ \\___|_|  (_)
         """ + TextColors.WHITE
         )
-    restart_game()
 
 
 def display_hangman(lives):
@@ -302,21 +299,17 @@ def restart_game():
     """
     Restart game function
     """
-    game_restart = False
-    while not game_restart:
+    while True:
         restart = input(f"Would you like to play again? {TextColors.BLUE}"
                         f"Y/N{TextColors.WHITE}\n ").upper()
         try:
             if restart == "Y":
-                game_restart = True
-                welcome_to_game()
-                word = get_random_word()
-                play_game(word)
+                return True
 
             elif restart == "N":
-                game_restart = True
                 print(TextColors.BLUE + "\nThank you for playing! Take care"
                       " until next time! \n" + TextColors.WHITE)
+                return False
 
             else:
                 raise ValueError(
@@ -333,10 +326,12 @@ def main():
     The main function to call all other functions
     """
     username = welcome_to_game()
-    word = get_random_word()
-    final_score = play_game(word)
-    update_scores(username, final_score)
-    restart_game()
+    game_restart = True
+    while game_restart:
+        word = get_random_word()
+        final_score = play_game(word)
+        update_scores(username, final_score)
+        game_restart = restart_game()
 
 
 if __name__ == "__main__":
