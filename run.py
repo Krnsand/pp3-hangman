@@ -17,8 +17,8 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('hangman')
 
-# scoreboard = SHEET.worksheet("scores")
-# data = scoreboard.get_all_values()
+scoreboard = SHEET.worksheet("scores")
+data = scoreboard.get_all_values()
 
 
 class TextColors:
@@ -81,7 +81,7 @@ def play_game(word):
     """
     Function to play game
     """
-    # score = 0
+    score = 0
     word_completion = "_" * len(word)
     guessed = False
     guessed_letters = []
@@ -159,15 +159,15 @@ def play_game(word):
               + TextColors.BOLD + f" {word}" + TextColors.WHITE +
               " correctly!")
         player_wins()
-        # score += 10
-        # return score
+        score += 10
+        return score
 
     else:
         print("Sorry you ran out of tries."
               " The word was" + TextColors.BOLD + f" {word}.")
         game_over()
-        # score -= 10
-        # return score
+        score -= 10
+        return score
 
 
 def player_wins():
@@ -289,14 +289,13 @@ def display_hangman(lives):
     return stages[lives]
 
 
-# def update_scores(username, final_score):
+def update_scores(username, final_score):
     """
     Add 10 points when complete the game and lose 10 points if lose the game.
     Update the score to scoreboard
     """
-    # worksheet_to_update = SHEET.worksheet(final_score)
-    # worksheet_to_update.append_row(username)
-    # print(f"Final Score: {final_score}")
+    scoreboard.append_row([username, final_score])
+    print(f"Final Score: {final_score}")
 
 
 def restart_game():
@@ -333,12 +332,10 @@ def main():
     """
     The main function to call all other functions
     """
-    # username =
-    welcome_to_game()
+    username = welcome_to_game()
     word = get_random_word()
-    # final_score =
-    play_game(word)
-    # update_scores(username, final_score)
+    final_score = play_game(word)
+    update_scores(username, final_score)
     restart_game()
 
 
