@@ -111,7 +111,7 @@ My target audience is anyone who wants to play a game. Programmers might find th
     * An error message in red tells the player what is wrong
     * the player is asked to try again
 
-![Error message](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/game_over.png)
+![Error message](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/y_or_n.png)
 
 * Thanks for player
     * Here the player has chosen N (NO) and the game stops
@@ -143,3 +143,5 @@ My target audience is anyone who wants to play a game. Programmers might find th
  ## **Credits**
 
  ### **Thanks**
+  * André!!! scores 
+  * Viktor?
