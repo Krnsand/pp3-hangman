@@ -106,6 +106,13 @@ My target audience is anyone who wants to play a game. Programmers might find th
 
 ![Game over](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/game_over.png)
 
+* Error message
+    * The player has written H instead of Y/N
+    * An error message in red tells the player what is wrong
+    * the player is asked to try again
+
+![Error message](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/game_over.png)
+
 * Thanks for player
     * Here the player has chosen N (NO) and the game stops
 
