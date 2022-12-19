@@ -47,7 +47,7 @@ My target audience is anyone who wants to play a game. Programmers might find th
     * Here the player has used an invalid character (' ! ') which is shown with red text
     * The player is prompted to entera new name
 
-![Letter and numbers only](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/welcome_user.png)
+![Letter and numbers only](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/lets_and_numbs.png)
 
  * Start game
     * Here the player gets a visual of the gallows that will build with each wrong guess
@@ -116,6 +116,7 @@ My target audience is anyone who wants to play a game. Programmers might find th
   * I would like to add a leaderboard where players can play for points and see what other players have gotten and in that way play against each other in a way   
 
  ## **Testing**
+ 
 
  ## **Technologies Used**
 
