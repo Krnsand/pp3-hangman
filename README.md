@@ -133,6 +133,9 @@ My target audience is anyone who wants to play a game. Programmers might find th
  ## **Bugs**
 
  ### **Fixed Bugs**
+  * First I could not get get_random_word to work with random.choice, but after having tried a couple of different methods I finally fix that. See commit 87a3ca1 for final code on that
+  * I struggled for a long time to get the scores calculated and exported to my google spreadsheet. My mentor helped me with debugging here and we managed to get that working. See commit a5c902f
+  *    
 
  ### **Unfixed Bugs**
 
@@ -145,3 +148,5 @@ My target audience is anyone who wants to play a game. Programmers might find th
  ### **Thanks**
   * André!!! scores 
   * Viktor?
+
+  

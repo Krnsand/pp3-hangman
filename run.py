@@ -292,7 +292,7 @@ def update_scores(username, final_score):
     Update the score to scoreboard
     """
     scoreboard.append_row([username, final_score])
-    print(f"Final Score: {final_score}")
+    print(TextColors.BOLD + f"Final Score: {final_score}" + TextColors.WHITE)
 
 
 def restart_game():
