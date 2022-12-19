@@ -137,10 +137,10 @@ def play_game(word):
 
         elif len(guess) == len(word) and guess.isalpha():
             if guess in guessed_words:
-                print(f"You already guessed the word {guess} \n")
+                print(f"You already guessed the word {guess}\n")
             elif guess != word:
                 print(TextColors.RED + f"{guess} is not the word."
-                      f"Lives left: {lives}\n" + TextColors.WHITE)
+                      f" Lives left: {lives}\n" + TextColors.WHITE)
                 lives -= 1
                 guessed_words.append(guess)
                 print(display_hangman(lives))
