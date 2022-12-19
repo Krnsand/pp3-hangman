@@ -207,6 +207,7 @@ def game_over():
          \\___/  \\_/ \\___|_|  (_)
         """ + TextColors.WHITE
         )
+    restart_game()
 
 
 def display_hangman(lives):
