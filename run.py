@@ -55,7 +55,7 @@ def welcome_to_game():
 
         if username.isalnum() is not True:
             print(TextColors.RED + "Error: Letters and numbers"
-                  "only.\n" + TextColors.WHITE)
+                  " only.\n" + TextColors.WHITE)
 
         else:
             print(f"\nHi {TextColors.BLUE}{username}!" + TextColors.WHITE)

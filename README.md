@@ -1,31 +1,25 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **Hangman**
+This is a classic Hangman game which in this case is a Python terminal game. It runs on the Code Institute mock terminal on Heroku written entirely in python code.
+The player can guess a letter or word until the word is completed or until one runs out of lives.
+My target audience is anyone who wants to play a game. Programmers might find the termial environment more intriguing, but I have used colors for an easier read for anyone not used with a terminal like this. 
 
-Welcome Krnsand,
+[Hangman](https://pp3-hangman1.herokuapp.com/) - You can view the live site here. 
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+![Am I Responsive?](docs/read-me/am-i-responsive.png) 
 
-## Reminders
-
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
-
-## Creating the Heroku app
-
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
+## **Table of Contents**
+ * [**How to Play**](#how-to-play)
+ * [**Planning Stage**](#planning-stage)
+   * User Goals
+   * Using FlowCharts
+ * [**Features**](#features)
+   * Future Features
+ * [**Testing**](#testing)
+ * [**Technologies Used**](#technologies-used)
+ * [**Bugs**](#bugs)
+   * Fixed Bugs
+   * Unfixed Bugs
+ * [**Validators**](#validators)
+ * [**Deployment**](#deployment)
+ * [**Credits**](#credits)
+   * Thanks
