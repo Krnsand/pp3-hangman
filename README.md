@@ -31,7 +31,7 @@ My target audience is anyone who wants to play a game. Programmers might find th
  ### **User Goals**
 
  ### **Using FlowCharts**
- ![Design FlowChart](docs/read-me/hangman-flowchart.png)
+ ![Design FlowChart](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/flowchart.png)
 
  ## **Features**
 
@@ -116,7 +116,10 @@ My target audience is anyone who wants to play a game. Programmers might find th
   * I would like to add a leaderboard where players can play for points and see what other players have gotten and in that way play against each other in a way   
 
  ## **Testing**
- 
+  * I have tested the code using a Linter (PEP8?) that has shown errors and warnings in the code continuously, allowing me to fix them right away
+  * I have tested the code troughout my progress in the Gitpod terminal to make sure that the code is doing what I want it to do
+  * I have tested the code in my deployed version to make sure that it does the same thing as in the Gidpod termial
+  * I have asked friends to try it to make sure the game layout makes sense and that it is intuitive, even for a non programmer. 
 
  ## **Technologies Used**
 
