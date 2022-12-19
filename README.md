@@ -95,7 +95,9 @@ My target audience is anyone who wants to play a game. Programmers might find th
 ![You win](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/you_win.png)
 
 * Play again
-    * Here the player has chosen Y (YES) and the game restarts 
+    * Here the player has chosen Y (YES) and the game restarts
+    * The player can see their final score
+    * The game restarts 
 
 ![Play again](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/play_again.png)
 
