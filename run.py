@@ -151,7 +151,7 @@ def play_game(word):
         else:
             print(TextColors.RED + "Not a valid guess. \n" + TextColors.WHITE)
             print(display_hangman(lives))
-            print(word_completion)
+            # print(word_completion)
             print("\n")
 
     if guessed:
