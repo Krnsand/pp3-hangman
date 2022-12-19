@@ -43,6 +43,12 @@ My target audience is anyone who wants to play a game. Programmers might find th
 
 ![Welcome to game](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/welcome_user.png)
 
+* Letters and numbers only
+    * Here the player has used an invalid character (' ! ') which is shown with red text
+    * The player is prompted to entera new name
+
+![Letter and numbers only](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/welcome_user.png)
+
  * Start game
     * Here the player gets a visual of the gallows that will build with each wrong guess
     * They can see how many lives they will start out with
