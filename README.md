@@ -61,25 +61,53 @@ My target audience is anyone who wants to play a game. Programmers might find th
 ![Correct guess](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/correct_guess.png)
 
  * Not a valid guess
-    *
+    * Here the player has made an invalid guess (' . ') which is shown with red text
+    * The player is prompted to make a new guess
 
+![Not valid guess](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/not_valid.png)
 
-![](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/start_game.png)
+* Wrong guess
+    * Here the player gets a message that the letter they guessed is not in the word
+    * This is red as a visual feedback that it is an incorrect guess
+    * The amount of lives is shown so the player can know how many guesses they have left
+    * The guessed letter is also placed in the "Letters guessed" field
 
+![Wrong guess](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/wrong_guess.png)
 
-![](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/start_game.png)
+* Repeated guess
+    * Here the player gets a message that the letter they just guessed has already been guessed
+    * This is yellow as a visual feedback to alert the player that somethng is wrong but not wrong enough to loose a life
+    * The player is prompted to make a new guess
 
-![Start game](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/start_game.png)
+![Repeated guess](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/repeated_guess.png)
 
-![Start game](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/start_game.png)
+* You win!
+    * The player has guessed the word correctly and is rewarded with graphics printed
+    * The graphics is green as a visual feedback for success
+    * The player is asked if they would like to play again
 
-![Start game](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/start_game.png)
+![You win](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/you_win.png)
 
-![Start game](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/start_game.png)
+* Play again
+    * Here the player has chosen Y (YES) and the game restarts 
 
-![Start game](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/start_game.png)
+![Play again](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/play_again.png)
+
+* Game over
+    * The player has run out of lives without guessing the word, a graphics is printed
+    * The graphics is red as a visual feedback for failure
+    * The player is asked if they would like to play again
+
+![Game over](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/game_over.png)
+
+* Thanks for player
+    * Here the player has chosen N (NO) and the game stops
+
+![Thanks for playing](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/thanks_for_playing.png)
 
  ## **Future Features**
+  * I would like to add a possibility to choose a difficulty for the player. Where an easy setting would give an easier or shorter word, and a more difficult setting would give a longer and less common word
+  * I would like to add a leaderboard where players can play for points and see what other players have gotten and in that way play against each other in a way   
 
  ## **Testing**
 
