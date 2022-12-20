@@ -25,13 +25,21 @@ My target audience is anyone who wants to play a game. Programmers might find th
    * Thanks
 
  ## **How to Play**
+ Players are trying to guess a secret word. The word is randomly chosen and prints in the mock teriminal as _ _ _ _ _ depending on how many letters are in the word. With each correct guess the player can see where in the word the letter is placed. The player can guess entire words if they think they know it. With each wrong guess of letter or word, a life is lost. When the player runs out of lives it is game over.
 
  ## **Planning Stage**
 
  ### **User Goals**
+ To build a terminal version of Hangman to play when one wants to take a break from work or studying.
+ * The game should be easy to play.
+ * The game should be fun to play.
+ * There should be some level of challenge for the user to keep them coming back.
 
  ### **Using FlowCharts**
+I used a flowchart to plan my project
+
  ![Design FlowChart](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/flowchart.png)
+
 
  ## **Features**
 
@@ -90,6 +98,7 @@ My target audience is anyone who wants to play a game. Programmers might find th
 * You win!
     * The player has guessed the word correctly and is rewarded with graphics printed
     * The graphics is green as a visual feedback for success
+    * The final score is printed. If the player decides to play again the score will continue to add or subtract until the player no longer wants to play again
     * The player is asked if they would like to play again
 
 ![You win](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/you_win.png)
@@ -104,6 +113,7 @@ My target audience is anyone who wants to play a game. Programmers might find th
 * Game over
     * The player has run out of lives without guessing the word, a graphics is printed
     * The graphics is red as a visual feedback for failure
+    * The final score is printed. If the player decides to play again the score will continue to add or subtract until the player no longer wants to play again
     * The player is asked if they would like to play again
 
 ![Game over](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/game_over.png)
@@ -117,23 +127,25 @@ My target audience is anyone who wants to play a game. Programmers might find th
 
 * Thanks for player
     * Here the player has chosen N (NO) and the game stops
+    * The final score is printed and added to the scoreboard in the google spreadsheet
 
 ![Thanks for playing](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/thanks_for_playing.png)
 
 * Scoreboard
     * All the players scores are calculated and compiled into a google spreadsheet 
 
-![Scoreboard](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/thanks_for_playing.png)
+![Scoreboard](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/scores.png)
 
  ## **Future Features**
-  * I would like to add a possibility to choose a difficulty for the player. Where an easy setting would give an easier or shorter word, and a more difficult setting would give a longer and less common word
-  * I would like to add a leaderboard where players can play for points and see what other players have gotten and in that way play against each other in a way   
+  * I would like to add a possibility to choose a difficulty for the player. Where an easy setting would give an easier/more common or shorter word, and a more difficult setting would give a longer and less common word
+  * I would like to add a leaderboard where players can see what other players have gotten and in that way play against each other in a way   
 
  ## **Testing**
   * I have tested the code using a Linter (PEP8?) that has shown errors and warnings in the code continuously, allowing me to fix them right away
   * I have tested the code troughout my progress in the Gitpod terminal to make sure that the code is doing what I want it to do
   * I have tested the code in my deployed version to make sure that it does the same thing as in the Gidpod termial
-  * I have asked friends to try it to make sure the game layout makes sense and that it is intuitive, even for a non programmer. 
+  * I have asked friends to try it to make sure the game layout makes sense and that it is intuitive, even for a non programmer.
+  * I have exercised defensive programming in the way that I have tried to break my program by inputting wrong characters or inputting nothing, and printing an error message each time. See images in **Features** 
 
  ## **Technologies Used**
 
@@ -142,7 +154,7 @@ My target audience is anyone who wants to play a game. Programmers might find th
  ### **Fixed Bugs**
   * First I could not get get_random_word to work with random.choice, but after having tried a couple of different methods I finally fix that. See commit 87a3ca1 for final code on that
   * I struggled for a long time to get the scores calculated and exported to my google spreadsheet. My mentor helped me with debugging here and we managed to get that working. See commit a5c902f
-  *    
+  * It took me a while to get the lives to count down correctly, but after a discussion with my friend I got it to work. See commit ab4c053
 
  ### **Unfixed Bugs**
 
