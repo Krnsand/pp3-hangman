@@ -7,6 +7,8 @@ My target audience is anyone who wants to play a game. Programmers might find th
 
 ![Am I Responsive?](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/am_i_responsive.png) 
 
+--- 
+
 ## **Table of Contents**
  * [**How to Play**](#how-to-play)
  * [**Planning Stage**](#planning-stage)
@@ -24,6 +26,8 @@ My target audience is anyone who wants to play a game. Programmers might find th
  * [**Credits**](#credits)
    * Thanks
 
+--- 
+
  ## **How to Play**
  Players are trying to guess a secret word. The word is randomly chosen and prints in the mock teriminal as _ _ _ _ _ depending on how many letters are in the word. With each correct guess the player can see where in the word the letter is placed. The player can guess entire words if they think they know it. With each wrong guess of letter or word, a life is lost. When the player runs out of lives it is game over.
 
@@ -36,10 +40,14 @@ My target audience is anyone who wants to play a game. Programmers might find th
  * There should be some level of challenge for the user to keep them coming back.
 
  ### **Using FlowCharts**
-I used a flowchart to plan my project
+ * I used a flowchart to plan my project to give myself a clear structure of what I wanted to incorporate
+    * What steps are needed for the basics of the game?
+    * What happens if an invalid character is played?
+    * Does the player want to play again?
 
  ![Design FlowChart](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/flowchart.png)
 
+--- 
 
  ## **Features**
 
@@ -140,32 +148,69 @@ I used a flowchart to plan my project
   * I would like to add a possibility to choose a difficulty for the player. Where an easy setting would give an easier/more common or shorter word, and a more difficult setting would give a longer and less common word
   * I would like to add a leaderboard where players can see what other players have gotten and in that way play against each other in a way   
 
+--- 
+
  ## **Testing**
   * I have tested the code using a Linter (PEP8?) that has shown errors and warnings in the code continuously, allowing me to fix them right away
   * I have tested the code troughout my progress in the Gitpod terminal to make sure that the code is doing what I want it to do
   * I have tested the code in my deployed version to make sure that it does the same thing as in the Gidpod termial
   * I have asked friends to try it to make sure the game layout makes sense and that it is intuitive, even for a non programmer.
-  * I have exercised defensive programming in the way that I have tried to break my program by inputting wrong characters or inputting nothing, and printing an error message each time. See images in **Features** 
+  * I have exercised defensive programming in the way that I have tried to break my program by inputting wrong characters or inputting nothing, and printing an error message each time. See images in [**Features**](#features)
+
+---
 
  ## **Technologies Used**
+ * Languages
+    * Python.
+
+ * Libraries
+    * random to select a random word
+    * gspread for my google sheet with the scores
+    * credentials 
+
+ * Other
+    * The Code Institute's GitHub full template for Python to start the project
+    * A generator to create randomly generated words for my words.txt, taken from (https://www.randomlists.com/random-words)
+    * Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+    * GitHub is used to store the projects code after being pushed from Git.
+    * Heroku is used to build, run and scale applications in a similar manner across most languages.
+
+---
 
  ## **Bugs**
 
  ### **Fixed Bugs**
-  * First I could not get get_random_word to work with random.choice, but after having tried a couple of different methods I finally fix that. See commit 87a3ca1 for final code on that
+  * First I could not get get_random_word to work with random.choice, but after having tried a couple of different methods I finally managed to fix that. See commit 87a3ca1 for final code on that
   * I struggled for a long time to get the scores calculated and exported to my google spreadsheet. My mentor helped me with debugging here and we managed to get that working. See commit a5c902f
   * It took me a while to get the lives to count down correctly, but after a discussion with my friend I got it to work. See commit ab4c053
 
  ### **Unfixed Bugs**
+ None that I have been able to find
+
+ ---
 
  ## **Validators**
+ I have validated my code throughout the progress of my project thanks to a pre-installed Linter in the python essentials template 
+
+ ---
 
  ## **Deployment**
+ * To deploy this project I had to
+    * Create a new app in Heroku
+    * Add Config Var's for Creds and Port
+    * Add buildpacks for python and nodeJS
+    * Connect to Github
+    * Link the Heroku app to project repository
+    * Enable automatic deploys 
+    * Deploy manually
+---
 
  ## **Credits**
+ * 
 
  ### **Thanks**
   * André!!! scores 
-  * Viktor?
+  * Viktor! calculate scores to google sheet
 
+---
   

@@ -306,8 +306,8 @@ def restart_game(username, final_score):
                 return True
 
             elif restart == "N":
-                print(TextColors.BLUE + f"\nThank you for playing {username}! Take care"
-                      " until next time! \n" + TextColors.WHITE)
+                print(TextColors.BLUE + f"\nThank you for playing {username}!"
+                      " Take care until next time! \n" + TextColors.WHITE)
                 scoreboard.append_row([username, final_score])
                 return False
 
