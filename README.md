@@ -61,7 +61,7 @@ My target audience is anyone who wants to play a game. Programmers might find th
 
 * Letters and numbers only
     * Here the player has used an invalid character (' ! ') which is shown with red text
-    * The player is prompted to entera new name
+    * The player is prompted to enter a new name
 
 ![Letter and numbers only](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/lets_and_numbs.png)
 
@@ -69,7 +69,7 @@ My target audience is anyone who wants to play a game. Programmers might find th
     * Here the player gets a visual of the gallows that will build with each wrong guess
     * They can see how many lives they will start out with
     * How many letters the word to guess is comprised of
-    * Which letters already guessed (in this image there are no letters as it is at the start of the game and no guess has been made)
+    * Which letters have already been guessed (in this image there are no letters as it is at the start of the game and no guess has been made)
     * And a prompt to enter a letter
 
 ![Start game](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/start_game.png)
@@ -83,7 +83,7 @@ My target audience is anyone who wants to play a game. Programmers might find th
 ![Correct guess](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/correct_guess.png)
 
  * Not a valid guess
-    * Here the player has made an invalid guess (' . ') which is shown with red text
+    * Here the player has made an invalid guess (' ! ') which is shown with red text
     * The player is prompted to make a new guess
 
 ![Not valid guess](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/not_valid.png)
@@ -104,7 +104,7 @@ My target audience is anyone who wants to play a game. Programmers might find th
 ![Repeated guess](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/repeated_guess.png)
 
 * You win!
-    * The player has guessed the word correctly and is rewarded with graphics printed
+    * The player has guessed the word correctly and is rewarded with graphics printed in the terminal
     * The graphics is green as a visual feedback for success
     * The final score is printed. If the player decides to play again the score will continue to add or subtract until the player no longer wants to play again
     * The player is asked if they would like to play again
@@ -112,14 +112,14 @@ My target audience is anyone who wants to play a game. Programmers might find th
 ![You win](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/you_win.png)
 
 * Play again
-    * Here the player has chosen Y (YES) and the game restarts
+    * Here the player has chosen Y (YES)
     * The player can see their final score
     * The game restarts 
 
 ![Play again](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/play_again.png)
 
 * Game over
-    * The player has run out of lives without guessing the word, a graphics is printed
+    * The player has run out of lives without guessing the word, a graphics is printed in the terminal
     * The graphics is red as a visual feedback for failure
     * The final score is printed. If the player decides to play again the score will continue to add or subtract until the player no longer wants to play again
     * The player is asked if they would like to play again
@@ -129,11 +129,11 @@ My target audience is anyone who wants to play a game. Programmers might find th
 * Error message
     * The player has written H instead of Y/N
     * An error message in red tells the player what is wrong
-    * the player is asked to try again
+    * The player is asked to try again
 
 ![Error message](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/y_or_n.png)
 
-* Thanks for player
+* Thanks for playing
     * Here the player has chosen N (NO) and the game stops
     * The final score is printed and added to the scoreboard in the google spreadsheet
 
@@ -146,12 +146,12 @@ My target audience is anyone who wants to play a game. Programmers might find th
 
  ## **Future Features**
   * I would like to add a possibility to choose a difficulty for the player. Where an easy setting would give an easier/more common or shorter word, and a more difficult setting would give a longer and less common word
-  * I would like to add a leaderboard where players can see what other players have gotten and in that way play against each other in a way   
+  * I would like to add a leaderboard where players can see what other players have gotten and in that way play against each other
 
 --- 
 
  ## **Testing**
-  * I have tested the code using a Linter (PEP8?) that has shown errors and warnings in the code continuously, allowing me to fix them right away
+  * I have tested the code using a Linter that has shown errors and warnings in the code continuously, allowing me to fix them right away
   * I have tested the code troughout my progress in the Gitpod terminal to make sure that the code is doing what I want it to do
   * I have tested the code in my deployed version to make sure that it does the same thing as in the Gidpod termial
   * I have asked friends to try it to make sure the game layout makes sense and that it is intuitive, even for a non programmer.
@@ -180,7 +180,7 @@ My target audience is anyone who wants to play a game. Programmers might find th
  ## **Bugs**
 
  ### **Fixed Bugs**
-  * First I could not get get_random_word to work with random.choice, but after having tried a couple of different methods I finally managed to fix that. See commit 87a3ca1 for final code on that
+  * First I could not get get_random_word to work with random.choice, but after having tried a couple of different methods I finally managed to fix that. See commit 87a3ca1 for final code on that point
   * I struggled for a long time to get the scores calculated and exported to my google spreadsheet. My mentor helped me with debugging here and we managed to get that working. See commit a5c902f
   * It took me a while to get the lives to count down correctly, but after a discussion with my friend I got it to work. See commit ab4c053
 
