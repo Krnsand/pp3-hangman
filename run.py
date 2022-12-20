@@ -108,9 +108,9 @@ def play_game(word):
                       ", ".join(sorted(guessed_letters)) + "\n")
 
             elif guess not in word:
+                lives -= 1
                 print(TextColors.RED + f"{guess} is not in the"
                       f" word. Lives left: {lives} \n" + TextColors.WHITE)
-                lives -= 1
                 guessed_letters.append(guess)
                 print(display_hangman(lives))
                 print("The word to guess: " + " ".join(word_completion) +
@@ -139,9 +139,9 @@ def play_game(word):
             if guess in guessed_words:
                 print(f"You already guessed the word {guess}\n")
             elif guess != word:
+                lives -= 1
                 print(TextColors.RED + f"{guess} is not the word."
                       f" Lives left: {lives}\n" + TextColors.WHITE)
-                lives -= 1
                 guessed_words.append(guess)
                 print(display_hangman(lives))
             else:
@@ -291,11 +291,10 @@ def update_scores(username, final_score):
     Add 10 points when complete the game and lose 10 points if lose the game.
     Update the score to scoreboard
     """
-    scoreboard.append_row([username, final_score])
     print(TextColors.BOLD + f"Final Score: {final_score}" + TextColors.WHITE)
 
 
-def restart_game():
+def restart_game(username, final_score):
     """
     Restart game function
     """
@@ -309,6 +308,7 @@ def restart_game():
             elif restart == "N":
                 print(TextColors.BLUE + "\nThank you for playing! Take care"
                       " until next time! \n" + TextColors.WHITE)
+                scoreboard.append_row([username, final_score])
                 return False
 
             else:
@@ -327,11 +327,13 @@ def main():
     """
     username = welcome_to_game()
     game_restart = True
+    final_score = 0
     while game_restart:
         word = get_random_word()
-        final_score = play_game(word)
+        score = play_game(word)
+        final_score += score
         update_scores(username, final_score)
-        game_restart = restart_game()
+        game_restart = restart_game(username, final_score)
 
 
 if __name__ == "__main__":
