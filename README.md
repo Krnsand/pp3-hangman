@@ -120,6 +120,11 @@ My target audience is anyone who wants to play a game. Programmers might find th
 
 ![Thanks for playing](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/thanks_for_playing.png)
 
+* Scoreboard
+    * All the players scores are calculated and compiled into a google spreadsheet 
+
+![Scoreboard](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/thanks_for_playing.png)
+
  ## **Future Features**
   * I would like to add a possibility to choose a difficulty for the player. Where an easy setting would give an easier or shorter word, and a more difficult setting would give a longer and less common word
   * I would like to add a leaderboard where players can play for points and see what other players have gotten and in that way play against each other in a way   
