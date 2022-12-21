@@ -215,6 +215,7 @@ My target audience is anyone who wants to play a game. Programmers might find th
  * I used [ASCII Art Generator](http://patorjk.com/software/taag/#p=display&f=Doom&t=Type%20Something%20) for my graphics in the game
  * I used a video by [Kite](https://www.youtube.com/watch?v=m4nEnsavl6w) for the core game code, and then altered it/added to it to work the way I wanted with other features. I also used the illustrations of the hanged man
  * I took inspiration from [gibbo101](https://github.com/gibbo101/hangman/blob/main/README.md) regarding the colored code as well as how to get the random word from my words.txt file
+ * I took inspiration from [KeoCode](https://github.com/KeoCode/Hangman) regarding the welcome message
  * I used [Ozzmaker](https://ozzmaker.com/add-colour-to-text-in-python/) to understand how to write colored code
 
  ### **Thanks**
