@@ -52,7 +52,7 @@ My target audience is anyone who wants to play a game. Programmers might find th
  ## **Features**
 
  ### **Existing Features**
- * Welcome to the game
+ * **Welcome to the game**
     * Here the player gets welcomed to the game
     * They are asked to enter their name (for the scoreboard)
     * Once a name is entered the player gets to see the rules and after that the game begins
@@ -113,7 +113,7 @@ My target audience is anyone who wants to play a game. Programmers might find th
 
 * **Play again**
     * Here the player has chosen Y (YES)
-    * The player can see their final score
+    * The player can see their final score for this round
     * The game restarts 
 
 ![Play again](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/play_again.png)
@@ -152,22 +152,22 @@ My target audience is anyone who wants to play a game. Programmers might find th
 
  ## **Testing**
   * I have tested the code using a Linter that has shown errors and warnings in the code continuously, allowing me to fix them right away
-  * I have tested the code troughout my progress in the Gitpod terminal to make sure that the code is doing what I want it to do
+  * I have tested the code throughout my progress in the Gitpod terminal to make sure that the code is doing what I want it to do
   * I have tested the code in my deployed version to make sure that it does the same thing as in the Gidpod termial
   * I have asked friends to try it to make sure the game layout makes sense and that it is intuitive, even for a non programmer
   * I have exercised defensive programming in the way that I have tried to break my program by inputting wrong characters, inputting nothing or repeating guesses, and printing an error message each time. See images in <b>Letters and numbers only</b>, <b>Not a valid guess</b>, <b>Wrong guess</b>, <b>Repeated guess</b>, <b>Error message</b>
 ---
 
  ## **Technologies Used**
- * Languages
+ * **Languages**
     * Python.
 
- * Libraries
+ * **Libraries**
     * random to select a random word
     * gspread for my google sheet with the scores
     * credentials 
 
- * Other
+ * **Other**
     * The Code Institute's GitHub full template for Python to start the project
     * A generator to create randomly generated words for my words.txt, taken from (https://www.randomlists.com/random-words)
     * Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
@@ -184,7 +184,7 @@ My target audience is anyone who wants to play a game. Programmers might find th
   * It took me a while to get the lives to count down correctly, but after a discussion with my friend I got it to work. See commit ab4c053
 
  ### **Unfixed Bugs**
- One bug I have found is sometimes when I test the game on a mobile device, all my input data is shown each time I make a new input. See image. I have not experienced that this makes the game not work, but it does not make for a pleasant user experience. I don't know why this happens on mobile devices but I will look into it in the fututre
+ One bug I have found is sometimes when I test the game on a mobile device, all my input data is shown each time I make a new input. See bottom of image. I have not experienced that this makes the game not work, but it does not make for a pleasant user experience. I don't know why this happens on mobile devices but I will look into it in the fututre
 
 <details><summary>Mobile bug</summary>
   <img src="https://github.com/Krnsand/pp3-hangman/blob/main/assets/bug.png">
@@ -211,6 +211,7 @@ My target audience is anyone who wants to play a game. Programmers might find th
  ## **Credits**
  * I used [Am I Responsive?](https://ui.dev/amiresponsive) for my starting image
  * I used [Lucid Charts](https://lucid.app/users/login#/login) to make my flowchart
+ * I used [Love Sandwiches](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LS101+2021_T1/courseware/293ee9d8ff3542d3b877137ed81b9a5b/071036790a5642f9a6f004f9888b6a45/) to get the APIs for my spreadsheet, credentials and scope for the project
  * I used [ASCII Art Generator](http://patorjk.com/software/taag/#p=display&f=Doom&t=Type%20Something%20) for my graphics in the game
  * I used a video by [Kite](https://www.youtube.com/watch?v=m4nEnsavl6w) for the core game code, and then altered it/added to it to work the way I wanted with other features. I also used the illustrations of the hanged man
  * I took inspiration from [gibbo101](https://github.com/gibbo101/hangman/blob/main/README.md) regarding the colored code as well as how to get the random word from my words.txt file
