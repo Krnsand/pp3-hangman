@@ -65,7 +65,7 @@ My target audience is anyone who wants to play a game. Programmers might find th
 
 ![Letter and numbers only](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/lets_and_numbs.png)
 
- * Start game
+ * **Start game**
     * Here the player gets a visual of the gallows that will build with each wrong guess
     * They can see how many lives they will start out with
     * How many letters the word to guess is comprised of
@@ -74,7 +74,7 @@ My target audience is anyone who wants to play a game. Programmers might find th
 
 ![Start game](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/start_game.png)
 
- * Correct guess
+ * **Correct guess**
     * Here the player gets a message that the letter they guessed is in the word
     * This is green as a visual feedback that it is a correct guess
     * The guessed letter is placed at the correct placement in the word
@@ -82,13 +82,13 @@ My target audience is anyone who wants to play a game. Programmers might find th
 
 ![Correct guess](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/correct_guess.png)
 
- * Not a valid guess
+ * **Not a valid guess**
     * Here the player has made an invalid guess (' ! ') which is shown with red text
     * The player is prompted to make a new guess
 
 ![Not valid guess](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/not_valid.png)
 
-* Wrong guess
+* **Wrong guess**
     * Here the player gets a message that the letter they guessed is not in the word
     * This is red as a visual feedback that it is an incorrect guess
     * The amount of lives is shown so the player can know how many guesses they have left
@@ -96,14 +96,14 @@ My target audience is anyone who wants to play a game. Programmers might find th
 
 ![Wrong guess](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/wrong_guess.png)
 
-* Repeated guess
+* **Repeated guess**
     * Here the player gets a message that the letter they just guessed has already been guessed
     * This is yellow as a visual feedback to alert the player that somethng is wrong but not wrong enough to loose a life
     * The player is prompted to make a new guess
 
 ![Repeated guess](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/repeated_guess.png)
 
-* You win!
+* **You win!**
     * The player has guessed the word correctly and is rewarded with graphics printed in the terminal
     * The graphics is green as a visual feedback for success
     * The final score is printed. If the player decides to play again the score will continue to add or subtract until the player no longer wants to play again
@@ -111,14 +111,14 @@ My target audience is anyone who wants to play a game. Programmers might find th
 
 ![You win](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/you_win.png)
 
-* Play again
+* **Play again**
     * Here the player has chosen Y (YES)
     * The player can see their final score
     * The game restarts 
 
 ![Play again](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/play_again.png)
 
-* Game over
+* **Game over**
     * The player has run out of lives without guessing the word, a graphics is printed in the terminal
     * The graphics is red as a visual feedback for failure
     * The final score is printed. If the player decides to play again the score will continue to add or subtract until the player no longer wants to play again
@@ -126,20 +126,20 @@ My target audience is anyone who wants to play a game. Programmers might find th
 
 ![Game over](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/game_over.png)
 
-* Error message
+* **Error message**
     * The player has written H instead of Y/N
     * An error message in red tells the player what is wrong
     * The player is asked to try again
 
 ![Error message](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/y_or_n.png)
 
-* Thanks for playing
+* **Thanks for playing**
     * Here the player has chosen N (NO) and the game stops
     * The final score is printed and added to the scoreboard in the google spreadsheet
 
 ![Thanks for playing](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/thanks_for_playing.png)
 
-* Scoreboard
+* **Scoreboard**
     * All the players scores are calculated and compiled into a google spreadsheet 
 
 ![Scoreboard](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/scores.png)
@@ -154,8 +154,8 @@ My target audience is anyone who wants to play a game. Programmers might find th
   * I have tested the code using a Linter that has shown errors and warnings in the code continuously, allowing me to fix them right away
   * I have tested the code troughout my progress in the Gitpod terminal to make sure that the code is doing what I want it to do
   * I have tested the code in my deployed version to make sure that it does the same thing as in the Gidpod termial
-  * I have asked friends to try it to make sure the game layout makes sense and that it is intuitive, even for a non programmer.
-  * I have exercised defensive programming in the way that I have tried to break my program by inputting wrong characters or inputting nothing, and printing an error message each time. See images in [**Letters and numbers only**](#letters-and-numbers-only)
+  * I have asked friends to try it to make sure the game layout makes sense and that it is intuitive, even for a non programmer
+  * I have exercised defensive programming in the way that I have tried to break my program by inputting wrong characters, inputting nothing or repeating guesses, and printing an error message each time. See images in <b>Letters and numbers only</b>, <b>Not a valid guess</b>, <b>Wrong guess</b>, <b>Repeated guess</b>, <b>Error message</b>
 ---
 
  ## **Technologies Used**
@@ -184,7 +184,11 @@ My target audience is anyone who wants to play a game. Programmers might find th
   * It took me a while to get the lives to count down correctly, but after a discussion with my friend I got it to work. See commit ab4c053
 
  ### **Unfixed Bugs**
- None that I have been able to find
+ One bug I have found is sometimes when I test the game on a mobile device, all my input data is shown each time I make a new input. See image. I have not experienced that this makes the game not work, but it does not make for a pleasant user experience. I don't know why this happens on mobile devices but I will look into it in the fututre
+
+<details><summary>Mobile bug</summary>
+  <img src="https://github.com/Krnsand/pp3-hangman/blob/main/assets/bug.png">
+  </details>
 
  ---
 
@@ -205,11 +209,15 @@ My target audience is anyone who wants to play a game. Programmers might find th
 ---
 
  ## **Credits**
- * 
+ * I used [Am I Responsive?](https://ui.dev/amiresponsive) for my starting image
+ * I used [Lucid Charts](https://lucid.app/users/login#/login) to make my flowchart
+ * I used [ASCII Art Generator](http://patorjk.com/software/taag/#p=display&f=Doom&t=Type%20Something%20) for my graphics in the game
+ * I used a video by [Kite](https://www.youtube.com/watch?v=m4nEnsavl6w) for the core game code, and then altered it/added to it to work the way I wanted with other features. I also used the illustrations of the hanged man
+ * I took inspiration from [gibbo101](https://github.com/gibbo101/hangman/blob/main/README.md) regarding the colored code as well as how to get the random word from my words.txt file
+ * I used [Ozzmaker](https://ozzmaker.com/add-colour-to-text-in-python/) to understand how to write colored code
 
  ### **Thanks**
-  * André!!! scores 
-  * Viktor! calculate scores to google sheet
+  * I would like to thank my mentor André Aquilina for helping me throughout the progress with my project. He helped me figure out why my scores were not transfering to my google sheet 
 
 ---
   
