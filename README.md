@@ -1,7 +1,7 @@
 # **Hangman**
 This is a classic Hangman game which in this case is a Python terminal game. It runs on the Code Institute mock terminal on Heroku written entirely in python code.
-The player can guess a letter or word until the word is completed or until one runs out of lives.
-My target audience is anyone who wants to play a game. Programmers might find the termial environment more intriguing, but I have used colors for an easier read for anyone not used with a terminal like this. 
+The player can guess a letter or word until the word is completed or until they run out of lives.
+My target audience is anyone who wants to play a game. Programmers might find the termial environment more intriguing, but I have used colors for an easier read for anyone not used with a terminal view like this. 
 
 [Hangman](https://pp3-hangman1.herokuapp.com/) - You can view the live site here. 
 
@@ -34,10 +34,10 @@ My target audience is anyone who wants to play a game. Programmers might find th
  ## **Planning Stage**
 
  ### **User Goals**
- To build a terminal version of Hangman to play when one wants to take a break from work or studying.
- * The game should be easy to play.
- * The game should be fun to play.
- * There should be some level of challenge for the user to keep them coming back.
+ * My goal was to build a terminal version of Hangman to play when one wants to take a break from work or studying.
+    * The game should be easy to play.
+    * The game should be fun to play.
+    * There should be some level of challenge for the user to keep them coming back.
 
  ### **Using FlowCharts**
  * I used a flowchart to plan my project to give myself a clear structure of what I wanted to incorporate
@@ -70,7 +70,7 @@ My target audience is anyone who wants to play a game. Programmers might find th
     * They can see how many lives they will start out with
     * How many letters the word to guess is comprised of
     * Which letters have already been guessed (in this image there are no letters as it is at the start of the game and no guess has been made)
-    * And a prompt to enter a letter
+    * A prompt to enter a letter
 
 ![Start game](https://github.com/Krnsand/pp3-hangman/blob/main/assets/images/start_game.png)
 
@@ -155,7 +155,7 @@ My target audience is anyone who wants to play a game. Programmers might find th
   * I have tested the code troughout my progress in the Gitpod terminal to make sure that the code is doing what I want it to do
   * I have tested the code in my deployed version to make sure that it does the same thing as in the Gidpod termial
   * I have asked friends to try it to make sure the game layout makes sense and that it is intuitive, even for a non programmer.
-  * I have exercised defensive programming in the way that I have tried to break my program by inputting wrong characters or inputting nothing, and printing an error message each time. See images in [**Features**](#features)
+  * I have exercised defensive programming in the way that I have tried to break my program by inputting wrong characters or inputting nothing, and printing an error message each time. See images in [Letters and numbers only](#letters-and-numbers-only)
 
 ---
 
