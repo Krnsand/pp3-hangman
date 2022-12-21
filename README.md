@@ -156,7 +156,6 @@ My target audience is anyone who wants to play a game. Programmers might find th
   * I have tested the code in my deployed version to make sure that it does the same thing as in the Gidpod termial
   * I have asked friends to try it to make sure the game layout makes sense and that it is intuitive, even for a non programmer.
   * I have exercised defensive programming in the way that I have tried to break my program by inputting wrong characters or inputting nothing, and printing an error message each time. See images in [**Letters and numbers only**](#letters-and-numbers-only)
-
 ---
 
  ## **Technologies Used**
